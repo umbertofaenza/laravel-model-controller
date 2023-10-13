@@ -15,7 +15,25 @@
 </head>
 
 <body>
-  <h1>Home</h1>
+
+  <div class="container">
+    <h1 class="mt-3 mb-5">Home</h1>
+
+    <div class="row row-cols-2 g-3">
+      @forelse($movies as $movie)
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            {{ $movie->title}}
+          </div>
+        </div>
+      </div>
+      @empty
+      No movies found
+      @endforelse
+    </div>
+  </div>
+  
 </body>
 
 </html>
