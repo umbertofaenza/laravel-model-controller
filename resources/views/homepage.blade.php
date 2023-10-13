@@ -1,39 +1,28 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.app')
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+@section('cards')
 
-  <title>Laravel</title>
+<section id="movie-cards">
+  {{-- section title --}}
+  <h4 class="section-title">
+    Movies
+  </h4>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  @vite('resources/js/app.js')
-</head>
-
-<body>
-
-  <div class="container">
-    <h1 class="mt-3 mb-5">Home</h1>
-
-    <div class="row row-cols-2 g-3">
-      @forelse($movies as $movie)
-      <div class="col">
-        <div class="card">
-          <div class="card-body">
-            {{ $movie->title}}
-          </div>
+  {{-- cards --}}
+  <div class="row row-cols-2 g-3">
+    @forelse($movies as $movie)
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          {{ $movie->title}}
         </div>
       </div>
-      @empty
-      No movies found
-      @endforelse
     </div>
+    @empty
+    No movies found
+    @endforelse
   </div>
-  
-</body>
 
-</html>
+</section>
+
+@endsection
