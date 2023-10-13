@@ -15,6 +15,9 @@
 </head>
 
 <body>
+    <header>
+        @include('partials._navbar')
+    </header>
 
     <main>
         <div class="container">
