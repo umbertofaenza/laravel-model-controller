@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
-@section('cards')
+@section('main-content')
 
+{{-- page title --}}
+<h1 class="mt-3 mb-5">
+  {{ $page_title }}
+</h1>
+
+{{-- cards section --}}
 <section id="movie-cards">
   {{-- section title --}}
   <h4 class="section-title">
@@ -22,7 +28,6 @@
     No movies found
     @endforelse
   </div>
-
 </section>
 
 @endsection

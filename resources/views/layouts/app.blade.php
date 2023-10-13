@@ -18,11 +18,7 @@
 
     <main>
         <div class="container">
-            {{-- page title --}}
-            <h1 class="mt-3 mb-5">Home</h1>
-        
-            {{-- cards --}}
-            @yield('cards')
+            @yield('main-content')
         </div>
     </main>
   
